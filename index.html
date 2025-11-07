@@ -4,51 +4,44 @@
   <meta charset="UTF-8">
   <title>Екатерина Соколова — Стилист-колорист</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display:700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0; padding: 0;
-      background: #fafafa;
-      font-family: 'Montserrat', sans-serif;
+      background: #fffefa;
+      font-family: 'Montserrat', Arial, sans-serif;
       color: #232323;
+      margin: 0;
     }
-    .hero {
+    .section {
+      max-width: 1000px;
+      margin: 48px auto 0 auto;
       background: #fff;
-      padding: 80px 20px 50px 20px;
-      text-align: center;
-      box-shadow: 0 8px 36px #e9dbab30;
+      border-radius: 36px;
+      box-shadow: 0 2px 44px #dfccb644;
+      padding: 58px 40px 38px 40px;
+      border: 1.2px solid #fbeab9;
     }
     .hero-photo {
       width: 320px; height: 320px; object-fit: cover;
       border-radius: 50%; box-shadow: 0 10px 48px #d5c78640;
-      border: 8px solid #fbeab9;
-      margin-bottom: 32px; background: #fff;
-      display: inline-block;
+      border: 8px solid #fbeab9; margin-bottom: 32px;
+      background: #fff; display: block; margin-left: auto; margin-right: auto;
     }
-    .hero-title {
+    h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3.7em; color: #a1722a;
-      letter-spacing: 0.01em;
-      margin-top: 0; margin-bottom: 16px;
-      font-weight: 700;
+      margin-bottom: 0.5em; margin-top: 16px; text-align: center;
     }
-    .hero-subtitle {
-      font-size: 1.29em;
-      color: #c6a052;
-      letter-spacing: 0.03em;
-      margin-bottom: 24px;
-    }
-    .hero-desc {
-      font-size: 1.16em;
-      max-width: 600px; margin: 0 auto 0 auto;
-      color: #232323;
-      opacity: 0.78;
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #a1722a; font-size: 2em; font-weight: 700; margin-bottom: 30px;
     }
     nav {
-      display: flex; justify-content: center; gap: 38px;
-      margin: 40px 0 28px 0; flex-wrap: wrap;
-      background: none;
+      display: flex;
+      justify-content: center;
+      gap: 38px;
+      margin: 40px 0 18px 0;
+      flex-wrap: wrap;
     }
     nav a {
       color: #a1722a;
@@ -61,22 +54,14 @@
       font-family: 'Montserrat', sans-serif;
     }
     nav a:hover { border-bottom: 2.5px solid #c6a052;}
-    section {
-      max-width: 980px; margin: 0 auto 52px auto;
-      background: #fff;
-      border-radius: 38px;
-      box-shadow: 0 2px 38px #f5e4b242;
-      padding: 54px 38px 38px 38px;
-      border: 1.5px solid #f7e6c8;
-      position: relative; top: -35px;
+    .main-btn {
+      display: inline-block; background: #c6a052; color: #fff; font-weight: 700;
+      border: none; border-radius: 32px; font-size: 1.16em; padding: 0.93em 2.3em;
+      margin-top: 22px; box-shadow: 0 2px 14px #ecd99b19; text-decoration: none;
+      transition: background 0.25s, color 0.20s;
     }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      color: #a1722a; font-size: 2em;
-      font-weight: 700;
-      margin-top: 0; margin-bottom: 30px;
-    }
-    .about { font-size: 1.14em; line-height: 1.75; }
+    .main-btn:hover { background: #a1722a; color: #fffebd; }
+    .about { font-size: 1.14em; line-height: 1.7; }
     .exp-table {
       width: 100%; border-collapse: collapse; margin-bottom: 12px;
       font-size: 1.11em;
@@ -97,13 +82,15 @@
       border-radius: 22px; padding: 30px 0;
       margin-bottom: 24px; box-shadow: 0 2px 20px #dfc38c25;
       border: 1.2px solid #efefc6;
+      max-width: 900px; margin-left: auto; margin-right: auto;
     }
-    .carousel-wrapper {max-width: 890px; margin: auto; position: relative;}
+    .carousel-wrapper {max-width: 760px; margin: auto; position: relative;}
     .carousel-track {
       display: flex; transition: transform 0.7s cubic-bezier(.7,2,.2,1);
+      overflow: hidden;
     }
     .carousel-slide {
-      min-width: 390px; max-width: 96vw; height: 390px;
+      min-width: 380px; max-width: 96vw; height: 380px;
       margin: 0 15px; flex-shrink: 0;
       border-radius: 13px; overflow: hidden;
       box-shadow: 0 2px 27px #a1845a16;
@@ -137,10 +124,10 @@
     }
     .carousel-dot.active { background: #a1722a;}
     @media (max-width: 950px) {
-      section { padding: 23px 2vw 15px 2vw; border-radius: 20px;}
+      .section { padding: 23px 2vw 15px 2vw; border-radius: 19px; }
       .carousel-slide { min-width: 86vw; height: 230px;}
       .hero-photo { width: 150px; height: 150px;}
-      .hero-title { font-size: 2.1em; }
+      h1 { font-size: 2.1em; }
     }
     .contacts { display: flex; flex-wrap: wrap; gap: 27px;
       font-size: 1.13em; margin-top: 22px; align-items: center;}
@@ -152,11 +139,13 @@
   </style>
 </head>
 <body>
-  <div class="hero" id="hero">
-    <img src="1.png" alt="Екатерина Соколова" class="hero-photo" onerror="this.style.opacity=0.35">
-    <div class="hero-title">Екатерина Соколова</div>
-    <div class="hero-subtitle">Стилист-колорист</div>
-    <div class="hero-desc">Премиальный мастер, персональное окрашивание, уход и стиль для волос</div>
+  <section class="section" style="margin-top:48px;" id="hero">
+    <img src="/img/1.png" alt="Екатерина Соколова" class="hero-photo" onerror="this.style.opacity=0.4">
+    <h1>Екатерина Соколова</h1>
+    <div style="font-size:1.21em;color:#c6a052;text-align:center;margin-bottom:12px;">Стилист-колорист</div>
+    <div style="font-size:1.1em;max-width:480px;margin:0 auto 13px auto;text-align:center;opacity:.79;">
+      Премиальный мастер, персональное окрашивание, уход и стиль для волос.
+    </div>
     <nav>
       <a href="#about">О себе</a>
       <a href="#exp">Опыт</a>
@@ -164,16 +153,20 @@
       <a href="#works">Работы</a>
       <a href="#contacts">Контакты</a>
     </nav>
-  </div>
+      <a href="#works" class="main-btn">Портфолио работ</a>
+      <a href="#contacts" class="main-btn" style="background:#fff; color:#c6a052; border:2px solid #c6a052; margin-left:24px;">Контакты</a>
+  </section>
 
-  <section id="about">
+  <section class="section" id="about">
     <h2>О себе</h2>
     <div class="about">
-      <p>Опыт работы в парикмахерском искусстве более 3 лет. Постоянно совершенствуюсь через курсы повышения квалификации и отслеживаю мировые тенденции. Обладаю развитым эстетическим вкусом, насмотренностью и всегда ищу индивидуальные решения для клиентов. Умею строить экологичное общение с клиентами и командой, вдохновляюсь работами топовых мастеров и создаю образы, подчеркивающие индивидуальность каждого гостя.</p>
+      <p>
+        Опыт работы в парикмахерском искусстве более 3 лет. Постоянно совершенствуюсь через курсы повышения квалификации и отслеживаю мировые тенденции. Обладаю развитым эстетическим вкусом, насмотренностью и всегда ищу индивидуальные решения для клиентов. Умею строить экологичное общение с клиентами и командой, вдохновляюсь работами топовых мастеров и создаю образы, подчеркивающие индивидуальность каждого гостя.
+      </p>
     </div>
   </section>
 
-  <section id="exp">
+  <section class="section" id="exp">
     <h2>Опыт</h2>
     <table class="exp-table">
       <tr>
@@ -186,7 +179,7 @@
     </table>
   </section>
 
-  <section id="edu">
+  <section class="section" id="edu">
     <h2>Обучение, дипломы и сертификаты</h2>
     <ul class="diplomas-list">
       <li>Колористика. Базовый курс Profi center 06/2023</li>
@@ -201,7 +194,7 @@
     </ul>
   </section>
 
-  <section id="works">
+  <section class="section" id="works">
     <h2>Фото работ</h2>
     <div class="carousel-block">
       <div class="carousel-wrapper">
@@ -220,12 +213,10 @@
       </div>
       <div class="carousel-pagination" id="carouselPagination"></div>
     </div>
-    <a href="https://disk.yandex.ru/d/8TgmVAOPwuvluw" target="_blank" style="color:#a1722a;font-weight:600;">
-      Посмотреть всё портфолио&nbsp;→
-    </a>
+    <a href="https://disk.yandex.ru/d/8TgmVAOPwuvluw" target="_blank" class="main-btn" style="background:#fff; color:#a1722a; border:2px solid #a1722a; margin:auto; display:block;max-width:320px;">Посмотреть всё портфолио&nbsp;→</a>
   </section>
 
-  <section id="contacts">
+  <section class="section" id="contacts">
     <h2>Контакты</h2>
     <div class="contacts">
       <span>Тел.: <a href="tel:+79607588740">+7(960)758-87-40</a></span>
