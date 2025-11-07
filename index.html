@@ -2,131 +2,167 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Резюме — Стилист-колорист</title>
+  <title>Екатерина Соколова — Стилист-колорист, резюме</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts для премиального вида -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --accent: #ffe078;
+      --text: #fff;
+      --bg: #18181B;
+      --block: #222227;
+      --highlight: #2a2d30;
+      --border: #303033;
+    }
     body {
-      font-family: 'Montserrat', Arial, sans-serif;
       margin: 0; padding: 0;
-      background: #faf7f4;
-      color: #232323;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
     }
     header {
-      background: linear-gradient(90deg, #CA9E6A 0%, #DCBFA1 100%);
-      color: #fff; padding: 50px 0;
-      text-align: center;
+      background: linear-gradient(90deg, #212121 0%, #1a1920 50%, #23232c 100%);
+      padding: 38px 0 22px 0; text-align: center;
     }
     header img {
-      width: 120px; height: 120px;
-      border-radius: 50%; object-fit: cover;
-      box-shadow: 0 2px 20px #ca9e6a55;
-      margin-bottom: 12px;
+      width: 164px; height: 164px; object-fit: cover;
+      border-radius: 50%; box-shadow: 0 2px 28px #ffe07888;
+      margin-bottom: 20px; border: 2.5px solid var(--accent);
+    }
+    h1 {
+      font-size: 2.5em; letter-spacing: 0.04em;
+      margin: 0 0 10px 0; font-weight: 700;
+      color: var(--accent);
+    }
+    .subtitle {
+      font-size: 1.17em; color: var(--text); opacity: 0.85;
+      margin-bottom: 15px;
     }
     nav {
       display: flex; justify-content: center;
-      gap: 28px; margin-top: 24px;
+      gap: 32px; margin-top: 16px; flex-wrap: wrap;
     }
     nav a {
-      color: #fff; text-decoration: none;
-      font-weight: 600; letter-spacing: 0.04em;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
+      color: var(--accent); text-decoration: none;
+      font-weight: 500; font-size: 1.07em;
+      letter-spacing: 0.05em; padding-bottom: 3px;
+      border-bottom: 2.5px solid transparent;
       transition: border-color 0.3s;
     }
-    nav a:hover { border-bottom: 2px solid #fff; }
-    section {
-      max-width: 800px; margin: 0 auto;
-      padding: 60px 20px 30px 20px;
-      background: #fff;
-      border-radius: 44px;
-      box-shadow: 0 2px 28px #dcbfa122;
-      margin-bottom: 36px;
-      position: relative; top: -40px;
+    nav a:hover {
+      border-bottom: 2.5px solid var(--accent);
     }
-    h2 { color: #CA9E6A; margin-top: 0; margin-bottom: 30px; font-size: 2em; }
-    .about { font-size: 1.15em; line-height: 1.7; }
+    section {
+      max-width: 980px; margin: 0 auto;
+      padding: 48px 24px 26px 24px;
+      background: var(--block);
+      border-radius: 40px;
+      box-shadow: 0 2px 36px #ffe07824;
+      margin-bottom: 36px;
+      position: relative; top: -32px;
+      border: 1.5px solid var(--border);
+    }
+    h2 {
+      color: var(--accent); font-size: 1.6em;
+      margin-top: 0; margin-bottom: 26px; font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .about { font-size: 1.18em; line-height: 1.7; color: var(--text); }
     .exp-table {
-      width: 100%; border-collapse: collapse; margin-bottom: 25px;
+      width: 100%; border-collapse: collapse;
+      margin-bottom: 18px;
+      color: var(--text); font-size: 1.08em;
     }
     .exp-table th, .exp-table td {
-      padding: 10px 7px; border-bottom: 1px solid #eee;
+      padding: 11px 7px; border-bottom: 1px solid var(--border);
       text-align: left;
     }
-    .exp-table th { background: #f9ede1; color: #a2815c; }
+    .exp-table th {
+      background: var(--highlight); color: var(--accent);
+      letter-spacing: 0.01em;
+    }
+    .diplomas-list {
+      margin: 0 0 14px 0; padding-left: 20px; color: var(--accent);
+      font-size: 1em;
+    }
+    .diplomas-list li { margin-bottom: 8px; color: var(--text); }
     .carousel {
-      width: 100%; overflow: hidden;
-      margin-bottom: 18px;
+      width: 100%; overflow: hidden; margin-bottom: 18px;
     }
     .carousel-inner {
-      display: flex;
-      transition: transform 0.6s cubic-bezier(.4,2,.3,1);
-      width: calc(400px * 5); /* change based on slides count */
+      display: flex; transition: transform 0.6s cubic-bezier(.4,2,.2,1);
+      width: calc(600px * 5); /* 5 изображений, можно увеличить */
     }
-    .carousel input {
-      display: none;
-    }
+    .carousel input { display: none; }
     .carousel-slides {
       display: flex; flex-direction: row;
-      width: 100%; min-height: 240px;
+      width: 100%; min-height: 340px;
     }
     .carousel-slide {
-      min-width: 400px;
-      max-width: 100%; margin: 0 10px;
+      min-width: 600px;
+      max-width: 100%; margin: 0 18px;
       border-radius: 22px; overflow: hidden;
-      box-shadow: 0 2px 20px #e6c8a040;
-      position: relative;
+      box-shadow: 0 2px 52px #ffe07838;
+      position: relative; background: #000;
+      border: 2.5px solid var(--accent);
     }
     .carousel-slide img {
-      width: 100%; vertical-align: middle;
-      display: block; object-fit: cover; min-height: 240px;
+      width: 100%; vertical-align: middle; display: block;
+      object-fit: cover; min-height: 340px; background: #18181B;
     }
-    /* Carousel navigation */
-    .carousel-nav { text-align: center; margin-top: 12px; }
+    .carousel-nav { text-align: center; margin-top: 18px; }
     .carousel-nav label {
       display: inline-block; width: 18px; height: 18px;
-      margin: 0 6px; border-radius: 50%;
-      background: #ca9e6a33; cursor: pointer;
-      border: 2px solid #CA9E6A;
+      margin: 0 7px; border-radius: 50%;
+      background: #ffe07819; cursor: pointer;
+      border: 2px solid var(--accent); transition: background 0.3s;
     }
-    /* Checked position */
     #cslide1:checked ~ .carousel-inner { transform: translateX(0); }
-    #cslide2:checked ~ .carousel-inner { transform: translateX(-410px); }
-    #cslide3:checked ~ .carousel-inner { transform: translateX(-820px); }
-    #cslide4:checked ~ .carousel-inner { transform: translateX(-1230px); }
-    #cslide5:checked ~ .carousel-inner { transform: translateX(-1640px); }
+    #cslide2:checked ~ .carousel-inner { transform: translateX(-618px); }
+    #cslide3:checked ~ .carousel-inner { transform: translateX(-1236px); }
+    #cslide4:checked ~ .carousel-inner { transform: translateX(-1854px); }
+    #cslide5:checked ~ .carousel-inner { transform: translateX(-2472px); }
     #cslide1:checked ~ .carousel-nav label[for="cslide1"],
     #cslide2:checked ~ .carousel-nav label[for="cslide2"],
     #cslide3:checked ~ .carousel-nav label[for="cslide3"],
     #cslide4:checked ~ .carousel-nav label[for="cslide4"],
     #cslide5:checked ~ .carousel-nav label[for="cslide5"] {
-      background: #CA9E6A;
+      background: var(--accent);
     }
-    @media (max-width: 600px) {
-      section      { padding: 34px 3vw 21px 3vw; border-radius: 26px; }
-      header img   { width: 80px; height: 80px; }
+    @media (max-width: 850px) {
+      section { padding: 28px 2vw 21px 2vw; border-radius: 24px; }
+      header img { width: 95px; height: 95px; }
       .carousel-slide { min-width: 90vw; }
       .carousel-inner { width: calc(90vw * 5); }
     }
     .contacts {
       display: flex; flex-wrap: wrap; gap: 22px;
-      font-size: 1.13em;
-      margin-top: 16px;
+      font-size: 1.13em; margin-top: 16px;
     }
     .contacts a, .contacts span {
-      color: #CA9E6A;
-      text-decoration: none;
-      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none; font-weight: 500;
+      letter-spacing: 0.01em;
     }
+    .contacts .extra { color: var(--text); font-weight: 400; opacity: 0.8; }
+    a:active, a:focus { outline: none; }
+    /* Дополнительные акценты для ссылок/hover */
+    .contacts a:hover { text-decoration: underline; color: #fffae0; }
   </style>
 </head>
 <body>
   <header>
-    <img src="your-photo.jpg" alt="Фото стилиста">
-    <h1>Екатерина Юрьева</h1>
-    <div style="font-size:1.1em;">Стилист-колорист, эксперт по уходу и окрашиванию волос</div>
+    <!-- Заменить путь к фото -->
+    <img src="img/1.jpg" alt="Фото стилиста">
+    <h1>Екатерина Соколова</h1>
+    <div class="subtitle">Стилист-колорист</div>
     <nav>
       <a href="#about">О себе</a>
       <a href="#exp">Опыт</a>
+      <a href="#edu">Обучение</a>
       <a href="#works">Работы</a>
       <a href="#contacts">Контакты</a>
     </nav>
@@ -135,36 +171,54 @@
   <section id="about">
     <h2>О себе</h2>
     <div class="about">
-      <p>В индустрии красоты с 2014 года. Работаю с самыми современными техниками окрашивания, стрижек и уходов. Помогаю клиентам находить свой стиль и раскрывать индивидуальность. Постоянно обучаюсь новым направлениям и трендам.</p>
-      <p>Главные ценности: качество, забота, индивидуальный подход.</p>
+      <p>Опыт работы в парикмахерском искусстве более 3 лет. Постоянно совершенствуюсь в профессии через курсы повышения квалификации и отслеживаю мировые тенденции. Обладаю развитым эстетическим вкусом и насмотренностью. Нахожу индивидуальный подход к клиентам и эффективно взаимодействую с коллегами. Вдохновляюсь работами топовых колористов и стремлюсь создавать уникальные образы для каждого клиента.</p>
     </div>
   </section>
 
   <section id="exp">
-    <h2>Опыт и образование</h2>
+    <h2>Опыт</h2>
     <table class="exp-table">
       <tr>
         <th>Период</th>
-        <th>Место работы/Курсы</th>
-        <th>Должность/Тема</th>
+        <th>Место</th>
+        <th>Должность</th>
       </tr>
       <tr>
-        <td>2021 — наст.время</td>
-        <td>Beauty Lab, Москва</td>
-        <td>Ведущий стилист-колорист</td>
+        <td>03/2025 – 10/2025</td>
+        <td>Betone Woman</td>
+        <td>Топ стилист</td>
       </tr>
       <tr>
-        <td>2018–2021</td>
-        <td>ВРЕМЯ КРАСОТЫ</td>
-        <td>Стилист по окрашиванию, уходу</td>
+        <td>03/2024 – 03/2025</td>
+        <td>Betone Woman</td>
+        <td>Стилист</td>
       </tr>
       <tr>
-        <td>2014–2018</td>
-        <td>Academy Wella</td>
-        <td>Обучение: колористика, уход, стрижки</td>
+        <td>03/2023 – 03/2024</td>
+        <td>PN Beauty studio</td>
+        <td>Стилист-колорист</td>
+      </tr>
+      <tr>
+        <td>09/2022 – 03/2023</td>
+        <td>PN Beauty studio</td>
+        <td>Ассистент парикмахера-стилиста</td>
       </tr>
     </table>
-    <div>Сертификаты: Wella, L’Oreal, Schwarzkopf, Redken</div>
+  </section>
+
+  <section id="edu">
+    <h2>Обучение, дипломы и сертификаты</h2>
+    <ul class="diplomas-list">
+      <li>Колористика. Базовый курс Profi center 06/2023</li>
+      <li>Женские и мужские стрижки Picasso 07/2024</li>
+      <li>Blond lab Keune design 01/2025</li>
+      <li>Женские короткие стрижки Dellon 04/2025</li>
+      <li>Коктейльные укладки Keune design 04/2025</li>
+      <li>Выход из черного Sekta 05/2025</li>
+      <li>Свадебный стилист Dellon 07/2025</li>
+      <li>Каскад Dellon 08/2025</li>
+      <li>Шитье седины Dellon 10/2025</li>
+    </ul>
   </section>
 
   <section id="works">
@@ -177,11 +231,11 @@
       <input type="radio" name="cslide" id="cslide5">
       <div class="carousel-inner">
         <div class="carousel-slides">
-          <div class="carousel-slide"><img src="work1.jpg" alt="работа 1" title="До/после окрашивания"></div>
-          <div class="carousel-slide"><img src="work2.jpg" alt="работа 2" title="Эксклюзивная техника"></div>
-          <div class="carousel-slide"><img src="work3.jpg" alt="работа 3" title="Уход, восстановление"></div>
-          <div class="carousel-slide"><img src="work4.jpg" alt="работа 4" title="Стрижка + окрашивание"></div>
-          <div class="carousel-slide"><img src="work5.jpg" alt="работа 5" title="Топовый блонд"></div>
+          <div class="carousel-slide"><img src="img/2.jpg" alt="Работа 1"></div>
+          <div class="carousel-slide"><img src="img/3.jpg" alt="Работа 2"></div>
+          <div class="carousel-slide"><img src="img/4.jpg" alt="Работа 3"></div>
+          <div class="carousel-slide"><img src="img/5.jpg" alt="Работа 4"></div>
+          <div class="carousel-slide"><img src="img/6.jpg" alt="Работа 5"></div>
         </div>
       </div>
       <div class="carousel-nav">
@@ -192,16 +246,20 @@
         <label for="cslide5"></label>
       </div>
     </div>
+    <a href="https://disk.yandex.ru/d/8TgmVAOPwuvluw" target="_blank" style="color:var(--accent);font-weight:600;">
+      Посмотреть всё портфолио&nbsp;→
+    </a>
   </section>
 
   <section id="contacts">
     <h2>Контакты</h2>
     <div class="contacts">
-      <span>Телефон: <a href="tel:+79001234567">+7 900 123-45-67</a></span>
-      <span>Instagram: <a href="https://instagram.com/yourprofile">@yourprofile</a></span>
-      <span>WhatsApp: <a href="https://wa.me/79001234567">+7 900 123-45-67</a></span>
-      <span>Email: <a href="mailto:k.yur@gmail.com">k.yur@gmail.com</a></span>
+      <span>Тел.: <a href="tel:+79607588740">+7(960)758-87-40</a></span>
+      <span>Email: <a href="mailto:ekaterina.omelik@yandex.ru">ekaterina.omelik@yandex.ru</a></span>
+      <span>Портфолио: <a href="https://disk.yandex.ru/d/8TgmVAOPwuvluw" target="_blank">Смотреть работы</a></span>
+      <span class="extra">Extra Link</span>
     </div>
   </section>
+
 </body>
 </html>
