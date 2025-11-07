@@ -2,138 +2,113 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Екатерина Соколова — Стильный стилист-колорист</title>
+  <title>Екатерина Соколова — Стилист-колорист</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Lato и Playfair Display — красиво сочетаются -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display:700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #fbf7f2;
-      --primary: #b16e36;
-      --accent: #fdc265;
-      --header-txt: #28241a;
-      --shadow: 0 4px 38px #debb9442;
-      --block: #fff;
-      --grey: #ede9e2;
-      --border: #eae4d7;
-    }
     body {
       margin: 0; padding: 0;
-      background: var(--bg);
-      color: var(--header-txt);
-      font-family: 'Lato', sans-serif;
-      min-height: 100vh;
-      font-size: 1.08em;
+      background: #fafafa;
+      font-family: 'Montserrat', sans-serif;
+      color: #232323;
     }
-    header {
-      background: linear-gradient(115deg, #fff3e4 0%, #ffecd2 100%);
-      text-align: center;
-      padding: 80px 18px 40px 18px;
-      box-shadow: var(--shadow);
-      position: relative;
-    }
-    .main-photo {
-      width: 207px; height: 207px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 6px 40px #b17e3888, 0 1.5px 0 #fdc265;
-      margin-bottom: 18px;
-      margin-top: -60px;
-      border: 5px solid #fff;
+    .hero {
       background: #fff;
+      padding: 80px 20px 50px 20px;
+      text-align: center;
+      box-shadow: 0 8px 36px #e9dbab30;
+    }
+    .hero-photo {
+      width: 320px; height: 320px; object-fit: cover;
+      border-radius: 50%; box-shadow: 0 10px 48px #d5c78640;
+      border: 8px solid #fbeab9;
+      margin-bottom: 32px; background: #fff;
       display: inline-block;
     }
-    h1 {
+    .hero-title {
       font-family: 'Playfair Display', serif;
-      color: var(--primary);
-      font-size: 2.7em;
-      margin: 0 0 10px 0;
+      font-size: 3.7em; color: #a1722a;
+      letter-spacing: 0.01em;
+      margin-top: 0; margin-bottom: 16px;
+      font-weight: 700;
     }
-    .subtitle {
-      font-size: 1.18em;
-      font-family: 'Lato', sans-serif;
-      margin-bottom: 22px;
+    .hero-subtitle {
+      font-size: 1.29em;
+      color: #c6a052;
+      letter-spacing: 0.03em;
+      margin-bottom: 24px;
+    }
+    .hero-desc {
+      font-size: 1.16em;
+      max-width: 600px; margin: 0 auto 0 auto;
+      color: #232323;
+      opacity: 0.78;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 40px 0 14px 0;
-      flex-wrap: wrap;
+      display: flex; justify-content: center; gap: 38px;
+      margin: 40px 0 28px 0; flex-wrap: wrap;
+      background: none;
     }
     nav a {
+      color: #a1722a;
       text-decoration: none;
-      color: var(--primary);
-      font-weight: 600;
-      font-size: 1.05em;
+      font-weight: 700;
+      font-size: 1.09em;
       border-bottom: 2.5px solid transparent;
       transition: border 0.2s;
-      padding-bottom: 1.5px;
+      padding-bottom: 2.5px;
+      font-family: 'Montserrat', sans-serif;
     }
-    nav a:hover { border-bottom: 2.5px solid var(--primary);}
+    nav a:hover { border-bottom: 2.5px solid #c6a052;}
     section {
-      max-width: 1100px;
-      margin: 0 auto 52px auto;
-      background: var(--block);
+      max-width: 980px; margin: 0 auto 52px auto;
+      background: #fff;
       border-radius: 38px;
-      box-shadow: var(--shadow);
-      padding: 54px 40px 38px 40px;
-      border: 1.8px solid var(--border);
-      position: relative;
-      top: -45px;
+      box-shadow: 0 2px 38px #f5e4b242;
+      padding: 54px 38px 38px 38px;
+      border: 1.5px solid #f7e6c8;
+      position: relative; top: -35px;
     }
     h2 {
       font-family: 'Playfair Display', serif;
-      color: var(--primary);
-      font-size: 2em;
-      margin-top: 0; margin-bottom: 38px;
+      color: #a1722a; font-size: 2em;
+      font-weight: 700;
+      margin-top: 0; margin-bottom: 30px;
     }
-    .about { font-size: 1.18em; line-height: 1.75; }
+    .about { font-size: 1.14em; line-height: 1.75; }
     .exp-table {
-      width: 100%; border-collapse: collapse; margin-bottom: 16px;
-      font-size: 1.12em;
+      width: 100%; border-collapse: collapse; margin-bottom: 12px;
+      font-size: 1.11em;
     }
     .exp-table th, .exp-table td {
       padding: 12px 8px;
-      border-bottom: 1.4px solid var(--grey);
+      border-bottom: 1.4px solid #f6ecd7;
       text-align: left;
     }
-    .exp-table th { background: #fcf1dd; color: var(--primary);}
+    .exp-table th { background: #f9f6ed; color: #a1722a;}
     .diplomas-list {
-      margin: 0 0 14px 2px;
-      padding-left: 24px;
-      color: var(--primary);
-      font-size: 1em;
+      margin: 0 0 14px 2px; padding-left: 24px;
+      color: #a1722a; font-size: 1em;
     }
-    .diplomas-list li { 
-      margin-bottom: 9px; 
-      color: var(--header-txt);
-      font-family: 'Lato', sans-serif;
-    }
+    .diplomas-list li { margin-bottom: 9px; color: #232323; }
     .carousel-block {
-      background: var(--grey);
-      border-radius: 20px;
-      padding: 28px 0;
-      margin-bottom: 22px;
-      box-shadow: 0 2px 20px #e7bd8e22;
-      border: 1.2px solid #f3e7d3;
+      background: #fcf8ee;
+      border-radius: 22px; padding: 30px 0;
+      margin-bottom: 24px; box-shadow: 0 2px 20px #dfc38c25;
+      border: 1.2px solid #efefc6;
     }
-    .carousel-wrapper { max-width: 810px; margin: auto; position: relative;}
+    .carousel-wrapper {max-width: 890px; margin: auto; position: relative;}
     .carousel-track {
-      display: flex;
-      transition: transform 0.7s cubic-bezier(.7,2,.2,1);
+      display: flex; transition: transform 0.7s cubic-bezier(.7,2,.2,1);
     }
     .carousel-slide {
-      min-width: 380px; max-width: 93vw;
-      height: 380px;
-      margin: 0 14px;
-      flex-shrink: 0;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 27px #b0632122;
+      min-width: 390px; max-width: 96vw; height: 390px;
+      margin: 0 15px; flex-shrink: 0;
+      border-radius: 13px; overflow: hidden;
+      box-shadow: 0 2px 27px #a1845a16;
       background: #fff;
-      position: relative; 
+      position: relative;
       display: flex; align-items: center; justify-content: center;
     }
     .carousel-slide img {
@@ -141,53 +116,47 @@
       display: block;
     }
     .carousel-btn {
-      position: absolute; top: 42%; width: 44px; height: 44px; 
-      background: #fff6eaee; border-radius: 50%;
-      border: 2px solid var(--primary);
-      box-shadow: 0 2px 14px #c492510b;
-      color: var(--primary); font-size: 1.55em;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
+      position: absolute; top: 48%; width: 48px; height: 48px;
+      background: #fff6eaa0; border-radius: 50%;
+      border: 2px solid #a1722a; box-shadow: 0 2px 14px #a493510b;
+      color: #a1722a; font-size: 1.6em; display: flex;
+      align-items: center; justify-content: center;
+      cursor: pointer; transition: background 0.2s, color 0.2s;
       z-index: 2;
     }
-    .carousel-btn:hover { background: var(--primary); color: #fff; }
-    .carousel-btn.left { left: -28px; }
-    .carousel-btn.right { right: -28px; }
-    .carousel-pagination {
-      margin-top: 16px; text-align: center;
-    }
+    .carousel-btn:hover { background: #a1722a; color: #fff;}
+    .carousel-btn.left { left: -25px;}
+    .carousel-btn.right { right: -25px;}
+    .carousel-pagination { margin-top: 17px; text-align: center; }
     .carousel-dot {
-      display: inline-block; width: 13px; height: 13px;
+      display: inline-block; width: 14px; height: 14px;
       border-radius: 50%;
-      background: #fff;
-      border: 2.4px solid var(--primary);
-      margin: 0 7px;
-      cursor: pointer;
+      background: #fff; border: 2.4px solid #a1722a;
+      margin: 0 8px; cursor: pointer;
       transition: background 0.27s;
     }
-    .carousel-dot.active { background: var(--primary);}
+    .carousel-dot.active { background: #a1722a;}
     @media (max-width: 950px) {
-      section { padding: 23px 2vw 15px 2vw; border-radius: 19px; }
-      .carousel-slide { min-width: 86vw; height: 235px;}
+      section { padding: 23px 2vw 15px 2vw; border-radius: 20px;}
+      .carousel-slide { min-width: 86vw; height: 230px;}
+      .hero-photo { width: 150px; height: 150px;}
+      .hero-title { font-size: 2.1em; }
     }
-    .contacts {
-      display: flex; flex-wrap: wrap; gap: 25px;
-      font-size: 1.13em; margin-top: 18px;
-      align-items: center;
-    }
+    .contacts { display: flex; flex-wrap: wrap; gap: 27px;
+      font-size: 1.13em; margin-top: 22px; align-items: center;}
     .contacts a, .contacts span {
-      color: var(--primary); text-decoration: none; font-weight: 600;
+      color: #a1722a; text-decoration: none; font-weight: 600;
     }
     .contacts .extra { color: #7e7e7e; font-weight: 400;}
-    .contacts a:hover { color: #de8e2a; text-decoration: underline;}
+    .contacts a:hover { color: #e6994c; text-decoration: underline;}
   </style>
 </head>
 <body>
-  <header>
-    <img src="1.png" alt="Фото стилиста" class="main-photo" onerror="this.style.opacity=0.35">
-    <h1>Екатерина Соколова</h1>
-    <div class="subtitle">Стилист-колорист, портфолио и резюме</div>
+  <div class="hero" id="hero">
+    <img src="img/1.jpg" alt="Екатерина Соколова" class="hero-photo" onerror="this.style.opacity=0.35">
+    <div class="hero-title">Екатерина Соколова</div>
+    <div class="hero-subtitle">Стилист-колорист</div>
+    <div class="hero-desc">Премиальный мастер, персональное окрашивание, уход и стиль для волос</div>
     <nav>
       <a href="#about">О себе</a>
       <a href="#exp">Опыт</a>
@@ -195,12 +164,12 @@
       <a href="#works">Работы</a>
       <a href="#contacts">Контакты</a>
     </nav>
-  </header>
+  </div>
 
   <section id="about">
     <h2>О себе</h2>
     <div class="about">
-      <p>Опыт работы в парикмахерском искусстве более 3 лет. Постоянно совершенствуюсь через курсы повышения квалификации и отслеживаю мировые тенденции. Обладаю развитым эстетическим вкусом, насмотренностью и всегда ищу индивидуальные решения для клиентов. Умею легко и экологично строить общение с клиентами и командой, вдохновляюсь работами топовых мировых мастеров и создаю образы, подчеркивающие индивидуальность каждого гостя.</p>
+      <p>Опыт работы в парикмахерском искусстве более 3 лет. Постоянно совершенствуюсь через курсы повышения квалификации и отслеживаю мировые тенденции. Обладаю развитым эстетическим вкусом, насмотренностью и всегда ищу индивидуальные решения для клиентов. Умею строить экологичное общение с клиентами и командой, вдохновляюсь работами топовых мастеров и создаю образы, подчеркивающие индивидуальность каждого гостя.</p>
     </div>
   </section>
 
@@ -208,30 +177,12 @@
     <h2>Опыт</h2>
     <table class="exp-table">
       <tr>
-        <th>Период</th>
-        <th>Место</th>
-        <th>Должность</th>
+        <th>Период</th> <th>Место</th> <th>Должность</th>
       </tr>
-      <tr>
-        <td>03/2025 – 10/2025</td>
-        <td>Betone Woman</td>
-        <td>Топ стилист</td>
-      </tr>
-      <tr>
-        <td>03/2024 – 03/2025</td>
-        <td>Betone Woman</td>
-        <td>Стилист</td>
-      </tr>
-      <tr>
-        <td>03/2023 – 03/2024</td>
-        <td>PN Beauty studio</td>
-        <td>Стилист-колорист</td>
-      </tr>
-      <tr>
-        <td>09/2022 – 03/2023</td>
-        <td>PN Beauty studio</td>
-        <td>Ассистент парикмахера-стилиста</td>
-      </tr>
+      <tr> <td>03/2025 – 10/2025</td> <td>Betone Woman</td> <td>Топ стилист</td> </tr>
+      <tr> <td>03/2024 – 03/2025</td> <td>Betone Woman</td> <td>Стилист</td> </tr>
+      <tr> <td>03/2023 – 03/2024</td> <td>PN Beauty studio</td> <td>Стилист-колорист</td> </tr>
+      <tr> <td>09/2022 – 03/2023</td> <td>PN Beauty studio</td> <td>Ассистент парикмахера-стилиста</td> </tr>
     </table>
   </section>
 
@@ -256,7 +207,6 @@
       <div class="carousel-wrapper">
         <button class="carousel-btn left" id="carouselPrev">&#8592;</button>
         <div class="carousel-track" id="carouselTrack">
-          <!-- Заменить количество слайдов и названия файлов при необходимости -->
           <div class="carousel-slide"><img src="img/2.jpg" alt="Работа 1"></div>
           <div class="carousel-slide"><img src="img/3.jpg" alt="Работа 2"></div>
           <div class="carousel-slide"><img src="img/4.jpg" alt="Работа 3"></div>
@@ -270,7 +220,7 @@
       </div>
       <div class="carousel-pagination" id="carouselPagination"></div>
     </div>
-    <a href="https://disk.yandex.ru/d/8TgmVAOPwuvluw" target="_blank" style="color:var(--primary);font-weight:600;">
+    <a href="https://disk.yandex.ru/d/8TgmVAOPwuvluw" target="_blank" style="color:#a1722a;font-weight:600;">
       Посмотреть всё портфолио&nbsp;→
     </a>
   </section>
@@ -285,7 +235,7 @@
     </div>
   </section>
   <script>
-    // Карусель на чистом JS, цикличная
+    // JS-карусель: цикличная
     const track = document.getElementById('carouselTrack');
     const slides = Array.from(track.children);
     const nextBtn = document.getElementById('carouselNext');
@@ -293,35 +243,27 @@
     const pagination = document.getElementById('carouselPagination');
     let current = 0;
     const slideCount = slides.length;
-
-    // create dots
     function renderPagination() {
       pagination.innerHTML = '';
       for (let i = 0; i < slideCount; i++) {
         const dot = document.createElement('span');
         dot.className = 'carousel-dot' + (i === current ? ' active' : '');
-        dot.addEventListener('click', () => {
-          current = i; updateCarousel();
-        });
+        dot.addEventListener('click', () => { current = i; updateCarousel(); });
         pagination.appendChild(dot);
       }
     }
-    // set carousel position
     function updateCarousel() {
-      const slideWidth = slides[0].offsetWidth + 28; // slide + margin
+      const slideWidth = slides[0].offsetWidth + 30;
       track.style.transform = `translateX(${-current * slideWidth}px)`;
       renderPagination();
     }
     nextBtn.onclick = function() {
-      current = (current + 1) % slideCount;
-      updateCarousel();
+      current = (current + 1) % slideCount; updateCarousel();
     };
     prevBtn.onclick = function() {
-      current = (current - 1 + slideCount) % slideCount;
-      updateCarousel();
+      current = (current - 1 + slideCount) % slideCount; updateCarousel();
     };
     window.addEventListener('resize', updateCarousel);
-    // init
     updateCarousel();
   </script>
 </body>
